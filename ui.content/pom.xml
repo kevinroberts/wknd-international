@@ -23,7 +23,7 @@
     <parent>
         <groupId>com.adobe.aem.guides</groupId>
         <artifactId>aem-guides-wknd</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.3-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -53,7 +53,7 @@
                     <packageType>content</packageType>
                     <accessControlHandling>merge</accessControlHandling>
                     <properties>
-                        <cloudManagerTarget>none</cloudManagerTarget>>
+                        <cloudManagerTarget>none</cloudManagerTarget>
                     </properties>
                     <dependencies>
                         <dependency>
@@ -83,12 +83,12 @@
         <dependency>
             <groupId>com.adobe.aem.guides</groupId>
             <artifactId>aem-guides-wknd.core</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.0.3-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.adobe.aem.guides</groupId>
             <artifactId>aem-guides-wknd.ui.apps</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.0.3-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
         <dependency>

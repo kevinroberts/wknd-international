@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+ |  Copyright 2015 Adobe Systems Incorporated
+ |
+ |  Licensed under the Apache License, Version 2.0 (the "License");
+ |  you may not use this file except in compliance with the License.
+ |  You may obtain a copy of the License at
+ |
+ |      http://www.apache.org/licenses/LICENSE-2.0
+ |
+ |  Unless required by applicable law or agreed to in writing, software
+ |  distributed under the License is distributed on an "AS IS" BASIS,
+ |  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ |  See the License for the specific language governing permissions and
+ |  limitations under the License.
+-->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.adobe.aem.guides</groupId>
     <artifactId>aem-guides-wknd</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.1-SNAPSHOT</version>
-    <description>WKND Sites Project</description>
+    <version>0.0.3-SNAPSHOT</version>
+   <description>WKND Sites Project</description>
+
     <modules>
         <module>all</module>
         <module>core</module>
@@ -15,7 +31,9 @@
         <module>it.tests</module>
         <module>it.launcher</module>
         <module>repository-structure</module>
+        <module>dispatcher</module>
     </modules>
+
     <properties>
         <aem.host>localhost</aem.host>
         <aem.port>4502</aem.port>
@@ -25,24 +43,32 @@
         <sling.password>admin</sling.password>
         <vault.user>admin</vault.user>
         <vault.password>admin</vault.password>
-        <core.wcm.components.version>2.7.0</core.wcm.components.version>
+        <core.wcm.components.version>2.8.0</core.wcm.components.version>
         <bnd.version>4.2.0</bnd.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
+
     <build>
         <plugins>
             <!-- Maven Release Plugin -->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.5.3</version>
+                <version>3.0-r1585899</version>
                 <configuration>
-                    <scmCommentPrefix>[maven-scm] :</scmCommentPrefix>
                     <preparationGoals>clean install</preparationGoals>
-                    <goals>install</goals>
+                    <goals>deploy</goals>
                     <releaseProfiles>release</releaseProfiles>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <projectVersionPolicyId>OddEvenVersionPolicy</projectVersionPolicyId>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.release</groupId>
+                        <artifactId>maven-release-oddeven-policy</artifactId>
+                        <version>3.0-r1585899</version>
+                    </dependency>
+                </dependencies>
             </plugin>
             <!-- Maven Source Plugin -->
             <plugin>
@@ -187,9 +213,9 @@
                 <plugin>
                     <groupId>org.apache.sling</groupId>
                     <artifactId>htl-maven-plugin</artifactId>
-                    <version>1.0.6</version>
+                    <version>1.3.0-1.4.0</version>
                     <configuration>
-                        <failOnWarnings>true</failOnWarnings>
+                        <failOnWarnings>false</failOnWarnings>
                     </configuration>
                     <executions>
                         <execution>
@@ -239,7 +265,7 @@
                     <version>3.0.0</version>
                 </plugin>
                 <!--This plugin's configuration is used to store Eclipse
-                            m2e settings only. It has no influence on the Maven build itself. -->
+                    m2e settings only. It has no influence on the Maven build itself. -->
                 <plugin>
                     <groupId>org.eclipse.m2e</groupId>
                     <artifactId>lifecycle-mapping</artifactId>
@@ -262,9 +288,15 @@
                                 </pluginExecution>
                                 <pluginExecution>
                                     <pluginExecutionFilter>
-                                        <groupId>org.apache.maven.plugins</groupId>
-                                        <artifactId>maven-dependency-plugin</artifactId>
-                                        <versionRange>[2.2,)</versionRange>
+                                        <groupId>
+                                            org.apache.maven.plugins
+                                        </groupId>
+                                        <artifactId>
+                                            maven-dependency-plugin
+                                        </artifactId>
+                                        <versionRange>
+                                            [2.2,)
+                                        </versionRange>
                                         <goals>
                                             <goal>copy-dependencies</goal>
                                             <goal>unpack</goal>
@@ -276,11 +308,19 @@
                                 </pluginExecution>
                                 <pluginExecution>
                                     <pluginExecutionFilter>
-                                        <groupId>org.codehaus.mojo</groupId>
-                                        <artifactId>build-helper-maven-plugin</artifactId>
-                                        <versionRange>[1.5,)</versionRange>
+                                        <groupId>
+                                            org.codehaus.mojo
+                                        </groupId>
+                                        <artifactId>
+                                            build-helper-maven-plugin
+                                        </artifactId>
+                                        <versionRange>
+                                            [1.5,)
+                                        </versionRange>
                                         <goals>
-                                            <goal>reserve-network-port</goal>
+                                            <goal>
+                                                reserve-network-port
+                                            </goal>
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
@@ -294,20 +334,24 @@
             </plugins>
         </pluginManagement>
     </build>
+
     <profiles>
         <!-- ====================================================== -->
         <!-- A D O B E P U B L I C P R O F I L E -->
         <!-- ====================================================== -->
         <profile>
             <id>adobe-public</id>
+
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
+
             <properties>
                 <releaseRepository-Id>adobe-public-releases</releaseRepository-Id>
                 <releaseRepository-Name>Adobe Public Releases</releaseRepository-Name>
                 <releaseRepository-URL>https://repo.adobe.com/nexus/content/groups/public</releaseRepository-URL>
             </properties>
+
             <repositories>
                 <repository>
                     <id>adobe-public-releases</id>
@@ -322,6 +366,7 @@
                     </snapshots>
                 </repository>
             </repositories>
+
             <pluginRepositories>
                 <pluginRepository>
                     <id>adobe-public-releases</id>
@@ -337,18 +382,19 @@
                 </pluginRepository>
             </pluginRepositories>
         </profile>
+
         <!-- Development profile: install only the bundle -->
         <profile>
             <id>autoInstallBundle</id>
             <!--
-                      To enable this feature for a bundle, the sling-maven-plugin
-                      (without configuration) needs to be included:
+                To enable this feature for a bundle, the sling-maven-plugin
+                (without configuration) needs to be included:
 
-                      <plugin>
-                          <groupId>org.apache.sling</groupId>
-                          <artifactId>sling-maven-plugin</artifactId>
-                       </plugin>
-                  -->
+                <plugin>
+                    <groupId>org.apache.sling</groupId>
+                    <artifactId>sling-maven-plugin</artifactId>
+                 </plugin>
+            -->
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
@@ -371,6 +417,7 @@
                 </pluginManagement>
             </build>
         </profile>
+
         <profile>
             <id>autoInstallPackage</id>
             <activation>
@@ -410,6 +457,7 @@
                 </pluginManagement>
             </build>
         </profile>
+
         <profile>
             <id>autoInstallPackagePublish</id>
             <activation>
@@ -594,11 +642,12 @@
                 <version>5.7.4</version>
                 <scope>provided</scope>
             </dependency>
+
             <!-- Testing -->
             <dependency>
                 <groupId>org.junit</groupId>
                 <artifactId>junit-bom</artifactId>
-                <version>5.4.1</version>
+                <version>5.5.2</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

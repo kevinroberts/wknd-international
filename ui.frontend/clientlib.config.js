@@ -7,40 +7,26 @@ module.exports = {
 
     libs: [
         {
-            name: "clientlib-dependencies",
-            allowProxy: true,
-            categories: ["wknd.dependencies"],
-            serializationFormat: "xml",
-            cssProcessor : ["default:none", "min:none"],
-            jsProcessor: ["default:none", "min:none"],
-            assets: {
-                js: [
-                    "dist/clientlib-dependencies/*.js",
-                ],
-                css: [
-                    "dist/clientlib-dependencies/*.css"
-                ]
-            }
-        },
-        {
             name: "clientlib-site",
             allowProxy: true,
             categories: ["wknd.site"],
-            dependencies: ["wknd.dependencies"],
             serializationFormat: "xml",
             cssProcessor : ["default:none", "min:none"],
             jsProcessor: ["default:none", "min:none"],
             assets: {
                 js: [
-                    "dist/clientlib-site/*.js",
+                    "dist/clientlib-site/js/vendors~site.*.js",
+                    "dist/clientlib-site/js/site.*.js"
                 ],
                 css: [
-                    "dist/clientlib-site/*.css"
+                    "dist/clientlib-site/css/vendors~site.*.css",
+                    "dist/clientlib-site/css/site.*.css"
                 ],
-                resources: [
-                    {src: "dist/clientlib-site/resources/images/*.*", dest: "images/"}, 
-                    {src: "dist/clientlib-site/resources/fonts/*.*", dest: "fonts/"}, 
-                ]
+                resources: {
+                    cwd: "./dist/clientlib-site/resources",
+                    flatten: false,
+                    files: ["**/*.*"]
+                }
             }
         }
     ]
