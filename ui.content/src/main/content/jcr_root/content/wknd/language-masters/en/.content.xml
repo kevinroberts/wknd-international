@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <errors/>
     <jcr:content
-        cq:lastModified="{Date}2019-10-27T16:44:32.639-07:00"
-        cq:lastModifiedBy="reference-adjustment-service"
+        cq:lastModified="{Date}2020-04-22T11:09:26.968-05:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2020-04-22T11:15:34.987-05:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
         cq:tags="[wknd:customer-journey/attract]"
         cq:template="/conf/wknd/settings/wcm/templates/landing-page-template"
         jcr:description="WKND is a collective of outdoors, music, crafts, adventure sports, and travel enthusiasts that want to share our experiences, connections, and expertise with the world."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:language="en"
+        jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="WKND Adventures and Travel"
+        jcr:uuid="9774841f-d6b8-4b91-87e7-747bd737c8d7"
         sling:resourceType="wknd/components/structure/page"
+        errorPages="/content/wknd/us/en/errors"
         pageTitle="Home">
         <root
             jcr:primaryType="nt:unstructured"
@@ -256,6 +264,11 @@
                 </carousel>
             </responsivegrid_933431667>
         </root>
+        <image
+            jcr:lastModified="{Date}2020-04-22T11:09:26.952-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
     </jcr:content>
     <magazine/>
     <adventures/>

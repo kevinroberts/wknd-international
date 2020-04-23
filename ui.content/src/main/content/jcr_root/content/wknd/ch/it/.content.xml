@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:conf="/conf/wknd"
         cq:lastModified="{Date}2020-01-09T12:57:01.579-08:00"
         cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2020-04-22T11:15:42.249-05:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
         cq:lastRolledout="{Date}2020-01-09T12:57:01.583-08:00"
         cq:lastRolledoutBy="admin"
         cq:lastTranslationUpdate="{Date}2019-10-28T11:20:32.026-07:00"
         cq:propertyInheritanceCancelled="[jcr:language]"
         cq:template="/conf/wknd/settings/wcm/templates/landing-page-template"
+        jcr:isCheckedOut="{Boolean}true"
         jcr:language="it_ch"
-        jcr:mixinTypes="[cq:LiveRelationship,cq:LiveSync,cq:PropertyLiveSyncCancelled]"
+        jcr:mixinTypes="[cq:LiveRelationship,cq:LiveSync,cq:PropertyLiveSyncCancelled,mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Italiano"
+        jcr:uuid="5217e437-6d73-43d9-8f43-75c17f653cb3"
         sling:resourceType="wknd/components/structure/page"
         pageTitle="Italiano">
         <root

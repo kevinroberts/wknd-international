@@ -5,11 +5,15 @@
     jcr:primaryType="dam:Asset"
     jcr:uuid="9e1e9835-64c8-42dc-9d36-fbd59e28f753">
     <jcr:content
+        cq:lastReplicated="{Date}2020-04-22T09:32:54.578-05:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
         cq:name="beervana-in-portland"
         cq:parentPath="/content/dam/wknd/en/adventures/beervana-portland"
         jcr:description=""
         jcr:lastModified="{Date}2019-10-25T16:29:52.827-07:00"
         jcr:lastModifiedBy="admin"
+        jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="dam:AssetContent"
         jcr:title="Beervana in Portland"
         contentFragment="{Boolean}true"

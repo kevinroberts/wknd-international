@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="8f2ab481-5f8d-4b2c-8fce-0e0cf640b7df">
+    <jcr:content
+        cq:lastReplicated="{Date}2020-04-22T09:32:51.548-05:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        cq:name="indiana-dunes-adventure"
+        cq:parentPath="/content/dam/wknd/en/adventures/indiana-dunes"
+        jcr:description=""
+        jcr:lastModified="{Date}2020-04-21T16:18:20.295-05:00"
+        jcr:lastModifiedBy="admin"
+        jcr:mixinTypes="[cq:ReplicationStatus]"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Indiana Dunes Adventure"
+        contentFragment="{Boolean}true"
+        lastFragmentSave="{Date}2020-04-21T16:18:20.295-05:00">
+        <data
+            cq:model="/conf/wknd/settings/dam/cfm/models/adventure"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[cq:Taggable]"
+                jcr:primaryType="nt:unstructured"
+                adventureActivity="Hiking"
+                adventureActivity_x0040_LastModified="{Date}2020-04-21T16:18:20.278-05:00"
+                adventureDescription="&lt;p>Indiana Dunes National Park hugs 15 miles of the southern shore of Lake Michigan and has much to offer. Whether you enjoy scouting for rare species of birds or flying kites on the sandy beach, the national park's 15,000 acres will continually enchant you.&amp;nbsp; Hikers will enjoy 50 miles of trails over rugged dunes, mysterious wetlands, sunny prairies, meandering rivers and peaceful forests.&lt;/p>&#xa;"
+                adventureDescription_x0040_ContentType="text/html"
+                adventureDescription_x0040_LastModified="{Date}2020-04-21T16:18:20.277-05:00"
+                adventureDifficulty="Beginner"
+                adventureDifficulty_x0040_LastModified="{Date}2020-04-21T16:18:20.279-05:00"
+                adventureGearList="&lt;ul>&#xa;&lt;li>Hiking shoes&lt;/li>&#xa;&lt;li>Water bottles&lt;/li>&#xa;&lt;li>Swim suit&lt;/li>&#xa;&lt;li>Sunscreen&lt;/li>&#xa;&lt;/ul>&#xa;"
+                adventureGearList_x0040_ContentType="text/html"
+                adventureGearList_x0040_LastModified="{Date}2020-04-21T16:18:20.280-05:00"
+                adventureGroupSize="2+"
+                adventureGroupSize_x0040_LastModified="{Date}2020-04-21T16:18:20.279-05:00"
+                adventureItinerary="&lt;h2>INDIANA DUNES NATIONAL PARK VISITORS CENTER&lt;/h2>&#xa;&lt;p>&lt;b>&lt;/b>Also called the Dorothy Buell Memorial Visitor Center, the center represents a regional partnership between Indiana Dunes National Park and Indiana Dunes Tourism (provides support for Porter County, Indiana) and serves as Indiana Dunes National Park's official visitor center. Visitors can find information about each of the partner entities, including available activities and programs or view a short orientation film, shop in Eastern National’s bookstore, and enjoy temporary exhibits. Ranger programs, including some for children, are offered on a regular schedule.&amp;nbsp; See ranger Kevin Roberts.&lt;/p>&#xa;&lt;h2>PAUL H. DOUGLAS CENTER FOR ENVIRONMENTAL EDUCATION&lt;/h2>&#xa;&lt;p>The center, located within the city limits of Gary, IN, and&amp;nbsp;named after the U.S. senator whose advocacy helped create the park, serves as the visitor center for the western end of the park. It serves as a hub for education programming throughout the school year and features a live animal room with native species of fish, reptiles, amphibians, and others. Nearby Miller Woods offers beautiful opportunities for hiking.&amp;nbsp;&lt;/p>&#xa;&lt;h2>DUNES LEARNING CENTER&lt;/h2>&#xa;&lt;p>&lt;b>&lt;/b>Since 1998, the park’s Learning Center has been jointly operated with a non-profit partner, Dunes Learning Center, Inc. It has served an average of 5,000 participants annually, providing opportunities for overnight stays and immersion environmental learning activities based on park resources.&amp;nbsp;&lt;/p>&#xa;&lt;h2>MOUNT BALDY&lt;/h2>&#xa;&lt;p>This 126-foot sand dune&amp;nbsp;is currently closed until further notice to visitors, but it is still a revered landmark at the park. Interestingly, Mt. Baldy migrates inland at the rate of about four feet each year.&lt;/p>&#xa;&lt;h2>WEST BEACH&lt;/h2>&#xa;&lt;p>&lt;b>&lt;/b>This is the national park’s most popular venue for swimming and use of picnic shelters. This is the only location within the national park that has lifeguards on duty during the peak summer season. Roving rangers offer interpretive services, including Junior Ranger programs. Visitors are charged an expanded amenity fee for access to West Beach.&lt;/p>&#xa;&lt;h2>KEMIL ACCESS POINT, DUNBAR ACCESS POINT, LAKE VIEW, AND CENTRAL ACCESS POINT&lt;/h2>&#xa;&lt;p>&lt;b>&lt;/b>Located east of Indiana Dunes State Park, these lakefront venues feature hiking and birdwatching along the Dune Ridge Trail, picnicking, and spectacular views of the lake.&lt;/p>&#xa;"
+                adventureItinerary_x0040_ContentType="text/html"
+                adventureItinerary_x0040_LastModified="{Date}2020-04-21T16:18:20.280-05:00"
+                adventurePrice="$40 USD"
+                adventurePrice_x0040_LastModified="{Date}2020-04-21T16:18:20.279-05:00"
+                adventurePrimaryImage="/content/dam/wknd/en/adventures/indiana-dunes/dunes1.jpg"
+                adventurePrimaryImage_x0040_LastModified="{Date}2020-04-21T16:18:20.280-05:00"
+                adventureTitle="Indiana Dunes"
+                adventureTitle_x0040_LastModified="{Date}2020-04-21T16:18:20.277-05:00"
+                adventureTripLength="4-7 hours"
+                adventureTripLength_x0040_LastModified="{Date}2020-04-21T16:18:20.278-05:00"
+                adventureType="Day Trip"
+                adventureType_x0040_LastModified="{Date}2020-04-21T16:18:20.278-05:00"/>
+        </data>
+        <metadata
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:lastModified="{Date}2019-10-28T11:02:43.627-07:00"
         cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2020-04-22T11:15:42.249-05:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
         cq:lastRolledout="{Date}2019-10-28T11:02:43.628-07:00"
         cq:lastRolledoutBy="admin"
         cq:tags="[]"
         cq:template="/conf/wknd/settings/wcm/templates/content-page-template"
         jcr:description="Here we answer some of the questions that we hear most often from the community."
-        jcr:mixinTypes="[cq:LiveRelationship]"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:LiveRelationship,mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="FAQs"
+        jcr:uuid="46e9ec36-e9df-428a-b6af-7c4e5163dbfc"
         sling:resourceType="wknd/components/structure/page">
         <root
             cq:lastRolledout="{Date}2019-10-28T11:02:43.515-07:00"

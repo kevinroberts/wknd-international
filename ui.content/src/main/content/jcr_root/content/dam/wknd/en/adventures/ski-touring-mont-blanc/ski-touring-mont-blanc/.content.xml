@@ -5,11 +5,15 @@
     jcr:primaryType="dam:Asset"
     jcr:uuid="83b63802-ffb0-47d6-94b0-ee821e887538">
     <jcr:content
+        cq:lastReplicated="{Date}2020-04-22T09:32:48.020-05:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
         cq:name="ski-touring-mont-blanc"
         cq:parentPath="/content/dam/wknd/en/adventures/ski-touring-mont-blanc"
         jcr:description=""
         jcr:lastModified="{Date}2019-10-16T07:17:15.205-07:00"
         jcr:lastModifiedBy="admin"
+        jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="dam:AssetContent"
         jcr:title="Ski Touring Mont Blanc"
         contentFragment="{Boolean}true"

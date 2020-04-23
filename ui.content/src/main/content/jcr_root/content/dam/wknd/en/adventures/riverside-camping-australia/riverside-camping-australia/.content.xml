@@ -5,11 +5,15 @@
     jcr:primaryType="dam:Asset"
     jcr:uuid="39678c95-d5e0-4162-ab49-51b38b5e8389">
     <jcr:content
+        cq:lastReplicated="{Date}2020-04-22T09:32:46.831-05:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
         cq:name="riverside-camping-australia"
         cq:parentPath="/content/dam/wknd/en/adventures/riverside-camping-australia"
         jcr:description=""
         jcr:lastModified="{Date}2019-10-16T16:09:21.613-07:00"
         jcr:lastModifiedBy="admin"
+        jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="dam:AssetContent"
         jcr:title="Riverside Camping Australia"
         contentFragment="{Boolean}true"

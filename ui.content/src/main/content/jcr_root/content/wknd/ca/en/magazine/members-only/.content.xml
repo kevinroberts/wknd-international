@@ -5,6 +5,9 @@
     <jcr:content
         cq:lastModified="{Date}2019-10-28T11:08:04.856-07:00"
         cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2020-04-22T11:15:40.214-05:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
         cq:lastRolledout="{Date}2019-10-28T11:02:41.699-07:00"
         cq:lastRolledoutBy="admin"
         cq:template="/conf/wknd/settings/wcm/templates/content-page-template"

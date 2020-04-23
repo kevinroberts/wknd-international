@@ -5,11 +5,15 @@
     jcr:primaryType="dam:Asset"
     jcr:uuid="8852c22a-e033-413c-8b33-dd2369e3c7c5">
     <jcr:content
+        cq:lastReplicated="{Date}2020-04-22T09:32:48.020-05:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
         cq:name="surf-camp-costa-rica"
         cq:parentPath="/content/dam/wknd/en/adventures/surf-camp-in-costa-rica"
         jcr:description=""
         jcr:lastModified="{Date}2019-10-21T12:07:21.052-07:00"
         jcr:lastModifiedBy="admin"
+        jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="dam:AssetContent"
         jcr:title="Surf Camp Costa Rica"
         contentFragment="{Boolean}true"

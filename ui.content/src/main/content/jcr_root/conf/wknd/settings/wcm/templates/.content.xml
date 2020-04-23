@@ -8,4 +8,6 @@
     <article-page-template/>
     <landing-page-template/>
     <experience-fragment-web-variation-template/>
+    <landing-page-template-es/>
+    <content-page-template-es/>
 </jcr:root>

@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:lastModified="{Date}2019-10-28T11:02:42.068-07:00"
         cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2020-04-22T11:15:40.214-05:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
         cq:lastRolledout="{Date}2019-10-28T11:02:42.069-07:00"
         cq:lastRolledoutBy="admin"
         cq:tags="[wknd:customer-journey/attract,wknd:customer-journey/engage,wknd:activity/surfing]"
         cq:template="/conf/wknd/settings/wcm/templates/landing-page-template"
         jcr:description="Join us on one of our next adventures.  Browse our list of curated experiences and sign up for one when you're ready to explore with us."
-        jcr:mixinTypes="[cq:LiveRelationship]"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:LiveRelationship,mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Adventures"
+        jcr:uuid="48a75790-7c67-4324-9cd3-8fb0177f9cc5"
         sling:resourceType="wknd/components/structure/page">
         <root
             cq:lastRolledout="{Date}2019-10-28T11:02:42.007-07:00"

@@ -6,6 +6,7 @@
         cq:lastModified="{Date}2019-10-12T08:40:04.177-07:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/wknd/settings/wcm/templates/adventure-page-template"
+        jcr:mixinTypes="[]"
         jcr:primaryType="cq:PageContent"
         sling:resourceType="wknd/components/structure/page">
         <root

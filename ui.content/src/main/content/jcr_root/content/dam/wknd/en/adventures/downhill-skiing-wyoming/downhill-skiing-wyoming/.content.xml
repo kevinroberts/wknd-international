@@ -5,11 +5,15 @@
     jcr:primaryType="dam:Asset"
     jcr:uuid="ec21e2d1-c8b6-430c-bd2a-24e52c879456">
     <jcr:content
+        cq:lastReplicated="{Date}2020-04-22T09:32:54.578-05:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
         cq:name="downhill-skiing-wyoming"
         cq:parentPath="/content/dam/wknd/en/adventures/downhill-skiing-wyoming"
         jcr:description=""
         jcr:lastModified="{Date}2019-10-17T07:16:01.243-07:00"
         jcr:lastModifiedBy="admin"
+        jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="dam:AssetContent"
         jcr:title="Downhill Skiing Wyoming"
         contentFragment="{Boolean}true"

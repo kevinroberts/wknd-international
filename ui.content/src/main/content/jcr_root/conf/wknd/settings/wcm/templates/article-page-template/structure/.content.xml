@@ -6,6 +6,7 @@
         cq:lastModified="{Date}2019-10-14T14:57:56.514-07:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/wknd/settings/wcm/templates/article-page-template"
+        jcr:mixinTypes="[]"
         jcr:primaryType="cq:PageContent"
         sling:resourceType="wknd/components/structure/page">
         <root

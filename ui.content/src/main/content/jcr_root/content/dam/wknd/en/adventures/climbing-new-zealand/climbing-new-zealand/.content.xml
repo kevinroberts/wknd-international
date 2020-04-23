@@ -5,11 +5,15 @@
     jcr:primaryType="dam:Asset"
     jcr:uuid="eb0175d3-b011-421b-b1be-0ef5b2b64518">
     <jcr:content
+        cq:lastReplicated="{Date}2020-04-22T09:32:53.054-05:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
         cq:name="climbing-new-zealand"
         cq:parentPath="/content/dam/wknd/en/adventures/climbing-new-zealand"
         jcr:description=""
         jcr:lastModified="{Date}2019-10-17T07:22:40.287-07:00"
         jcr:lastModifiedBy="admin"
+        jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="dam:AssetContent"
         jcr:title="Climbing New Zealand"
         contentFragment="{Boolean}true"

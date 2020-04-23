@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
+    <ski-touring/>
     <jcr:content
         cq:lastModified="{Date}2019-10-25T17:58:27.084-07:00"
         cq:lastModifiedBy="admin"
-        cq:lastReplicated="{Date}2019-10-25T17:52:15.710-07:00"
+        cq:lastReplicated="{Date}2020-04-22T11:15:34.987-05:00"
         cq:lastReplicatedBy="admin"
         cq:lastReplicationAction="Activate"
         cq:tags="[wknd:customer-journey/attract]"
@@ -196,7 +197,6 @@
     <guide-la-skateparks/>
     <arctic-surfing/>
     <western-australia/>
-    <skiitouring/>
     <members-only/>
     <san-diego-surf/>
 </jcr:root>

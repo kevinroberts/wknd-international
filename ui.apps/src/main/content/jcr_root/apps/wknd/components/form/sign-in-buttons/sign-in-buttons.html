@@ -29,12 +29,12 @@
     <a href="#sign-in"
        class="wknd-sign-in-buttons__button wknd-sign-in-buttons__button--sign-in"
        data-modal-url="${ properties.signInXfPath @ selectors='content', extension = 'html'}"
-       data-sly-test="${properties.signInLabel != '' }">${properties.signInLabel}</a>
+       data-sly-test="${properties.signInLabel != '' }">${properties.signInLabel @ i18n}</a>
 
     <a href="#sign-out"
        class="wknd-sign-in-buttons__button wknd-sign-out-buttons__button--sign-out"
        data-modal-url="${ properties.signOutXfPath @ selectors='content', extension = 'html'}"
-       data-sly-test="${properties.signOutLabel != '' }>${properties.signOutLabel}">${properties.signOutLabel}</a>
+       data-sly-test="${properties.signOutLabel != '' }>${properties.signOutLabel}">${properties.signOutLabel @ i18n}</a>
 
 </div>
 <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>

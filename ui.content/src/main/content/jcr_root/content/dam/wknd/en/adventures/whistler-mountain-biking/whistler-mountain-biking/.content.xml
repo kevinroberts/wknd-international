@@ -5,11 +5,15 @@
     jcr:primaryType="dam:Asset"
     jcr:uuid="576374bc-e25b-428f-a249-1b615e5c0cf0">
     <jcr:content
+        cq:lastReplicated="{Date}2020-04-22T09:32:49.636-05:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
         cq:name="whistler-mountain-biking"
         cq:parentPath="/content/dam/wknd/en/adventures/whistler-mountain-biking"
         jcr:description=""
         jcr:lastModified="{Date}2019-10-16T15:56:35.802-07:00"
         jcr:lastModifiedBy="admin"
+        jcr:mixinTypes="[cq:ReplicationStatus]"
         jcr:primaryType="dam:AssetContent"
         jcr:title="Whistler Mountain Biking"
         contentFragment="{Boolean}true"

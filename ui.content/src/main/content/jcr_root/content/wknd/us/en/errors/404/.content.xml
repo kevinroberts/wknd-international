@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:lastModified="{Date}2019-12-02T15:30:46.278-08:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2019-12-02T15:34:43.262-08:00"
+        cq:lastReplicated="{Date}2020-04-22T19:30:14.274-05:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        cq:lastRolledout="{Date}2020-04-22T11:09:58.483-05:00"
         cq:lastRolledoutBy="admin"
         cq:template="/conf/wknd/settings/wcm/templates/content-page-template"
-        jcr:mixinTypes="[cq:LiveRelationship]"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:LiveRelationship,mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Page not found"
+        jcr:uuid="e4b022ea-18fa-465c-80f2-9b22579cc662"
         sling:resourceType="wknd/components/structure/page"
         pageTitle="404">
         <root

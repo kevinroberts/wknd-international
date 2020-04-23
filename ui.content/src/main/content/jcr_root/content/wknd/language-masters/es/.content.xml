@@ -2,17 +2,22 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:allowedTemplates="[/conf/wknd/settings/wcm/templates/article-page-template,/conf/wknd/settings/wcm/templates/adventure-page-template,/conf/wknd/settings/wcm/templates/landing-page-template-es,/conf/wknd/settings/wcm/templates/content-page-template-es]"
         cq:conf="/conf/wknd"
-        cq:lastModified="{Date}2020-01-09T12:46:23.640-08:00"
+        cq:lastModified="{Date}2020-04-22T17:37:38.352-05:00"
         cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2020-04-22T17:38:59.224-05:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
         cq:lastTranslationUpdate="{Date}2019-10-28T11:20:24.572-07:00"
-        cq:template="/conf/wknd/settings/wcm/templates/landing-page-template"
+        cq:template="/conf/wknd/settings/wcm/templates/landing-page-template-es"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Español"
         jcr:uuid="9916b90a-6294-4904-9daf-5ee25a0d436d"
         sling:resourceType="wknd/components/structure/page"
+        errorPages="/content/wknd/us/es/errors"
         pageTitle="Español">
         <root
             jcr:primaryType="nt:unstructured"
@@ -62,15 +67,16 @@
                     cq:lastRolledoutBy="admin"
                     cq:panelTitle="Climbing New Zealand"
                     cq:styleIds="[1555543212672]"
-                    jcr:lastModified="{Date}2020-01-09T11:59:13.372-08:00"
+                    jcr:lastModified="{Date}2020-04-22T17:37:38.349-05:00"
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    jcr:title="WKND Adventures and Travel - Coming Soon!"
+                    jcr:title="WKND Aventuras"
                     sling:resourceType="wknd/components/content/teaser"
                     actionsEnabled="false"
                     descriptionFromPage="false"
                     fileReference="/content/dam/wknd/en/adventures/riverside-camping-australia/AdobeStock_216674449.jpeg"
+                    linkURL="/content/wknd/language-masters/es/aventuras"
                     textIsRich="true"
                     titleFromPage="false">
                     <actions
@@ -90,4 +96,8 @@
             </responsivegrid_933431667>
         </root>
     </jcr:content>
+    <errors/>
+    <about-us/>
+    <faqs/>
+    <aventuras/>
 </jcr:root>
