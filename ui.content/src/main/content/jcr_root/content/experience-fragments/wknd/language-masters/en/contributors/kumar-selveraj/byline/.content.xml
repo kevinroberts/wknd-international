@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:lastModified="{Date}2019-10-28T10:44:24.993-07:00"
         cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2020-04-22T17:40:04.859-05:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
         cq:tags="[]"
         cq:template="/conf/wknd/settings/wcm/templates/experience-fragment-web-variation-template"
         cq:xfVariantType="web"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Byline"
+        jcr:uuid="18781dcc-2ca7-46d0-b942-aea865fd5baa"
         sling:resourceType="wknd/components/structure/xfpage">
         <root
             jcr:primaryType="nt:unstructured"

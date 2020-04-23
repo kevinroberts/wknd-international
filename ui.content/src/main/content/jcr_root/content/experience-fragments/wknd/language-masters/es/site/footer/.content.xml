@@ -2,9 +2,9 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-09-15T16:41:34.593-07:00"
+        cq:lastModified="{Date}2019-09-18T13:44:54.872-07:00"
         cq:lastModifiedBy="admin"
-        cq:lastReplicated="{Date}2020-04-22T09:35:09.564-05:00"
+        cq:lastReplicated="{Date}2020-04-22T19:11:28.938-05:00"
         cq:lastReplicatedBy="admin"
         cq:lastReplicationAction="Activate"
         cq:tags="[]"
@@ -12,8 +12,8 @@
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Header"
-        jcr:uuid="46580801-b4de-48cd-a782-33dd6ca592d5"
+        jcr:title="Footer"
+        jcr:uuid="7b7d7335-f346-4a96-a60f-6195598ad20f"
         sling:resourceType="cq/experience-fragments/components/experiencefragment"/>
     <master/>
 </jcr:root>
