@@ -248,6 +248,7 @@
                                 width="6"/>
                         </cq:responsive>
                     </experiencefragment>
+                    <simpsonsquote jcr:primaryType="nt:unstructured" jcr:created="2020-08-04T21:51:29.651-05:00" jcr:createdBy="admin" jcr:lastModified="2020-08-05T16:24:15.795-05:00" jcr:lastModifiedBy="admin" numberOfQuotes="10" sling:resourceType="wknd/components/content/simpsonsquote"/>
                 </responsivegrid>
             </responsivegrid>
         </root>

@@ -4,6 +4,7 @@ import com.adobe.aem.guides.wknd.core.api.client.ApiException;
 import com.adobe.aem.guides.wknd.core.api.client.SimpsonsQuoteService;
 import com.adobe.aem.guides.wknd.core.api.client.model.Quote;
 import com.adobe.aem.guides.wknd.core.models.SimpsonsQuote;
+import org.apache.commons.lang3.RandomUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
@@ -21,6 +22,7 @@ import static com.adobe.aem.guides.wknd.core.util.AppConstants.WKND_COMPONENT_PA
 /**
  * SimpsonsQuoteImpl
  * Component for rendering a random simpson quote
+ *
  * @Injected fields/methods are assumed to be required. To mark them as optional, use @Optional:
  * DefaultInjectionStrategy.OPTIONAL to the @Model annotation: will change the default behavior
  */
@@ -47,33 +49,36 @@ public class SimpsonsQuoteImpl implements SimpsonsQuote {
         try {
             if (Objects.nonNull(numberOfQuotes)) {
                 quoteList = simpsonsQuoteService.getSimpsonsQuotes(numberOfQuotes);
-                for (int i = 0; i < quoteList.size(); i++) {
-                    Quote quote = quoteList.get(i);
-                    // reduce font size for longer quotes
-                    if (quote.getQuote().length() > 94) {
-                        quote.setQuoteFontSize("24px");
-                    } else if (quote.getQuote().length() >= 74 && quote.getQuote().length() <= 94) {
-                        quote.setQuoteFontSize("32px");
-                    } else {
-                        quote.setQuoteFontSize("48px");
-                    }
-                    // set prev. and next quote indices
-                    if (i == 0) {
-                        quoteList.get(0).setPrevQuote(numberOfQuotes);
-                        quoteList.get(0).setNextQuote(i+2);
-                    } else if (i == (quoteList.size() - 1)) {
-                        quoteList.get(i).setPrevQuote(i-2);
-                        quoteList.get(i).setNextQuote(1);
-                    } else {
-                        quoteList.get(i).setPrevQuote(i-2);
-                        quoteList.get(i).setNextQuote(i+2);
-                    }
-                }
             } else {
                 quoteList = simpsonsQuoteService.getSimpsonsQuotes(1);
-                quoteList.get(0).setNextQuote(numberOfQuotes);
-                quoteList.get(0).setPrevQuote(numberOfQuotes);
             }
+
+            for (int i = 0; i < quoteList.size(); i++) {
+                Quote quote = quoteList.get(i);
+                quote.setLikes(RandomUtils.nextInt(10, 500));
+                // reduce font size for longer quotes
+                if (quote.getQuote().length() > 177) {
+                    quote.setQuoteFontSize("22px");
+                } else if (quote.getQuote().length() > 94 && quote.getQuote().length() <= 177) {
+                    quote.setQuoteFontSize("24px");
+                } else if (quote.getQuote().length() >= 74 && quote.getQuote().length() <= 94) {
+                    quote.setQuoteFontSize("32px");
+                } else {
+                    quote.setQuoteFontSize("48px");
+                }
+                // set prev. and next quote indices
+                if (i == 0) {
+                    quoteList.get(0).setPrevQuote(numberOfQuotes);
+                    quoteList.get(0).setNextQuote(i + 2);
+                } else if (i == (quoteList.size() - 1)) {
+                    quoteList.get(i).setPrevQuote(i - 2);
+                    quoteList.get(i).setNextQuote(1);
+                } else {
+                    quoteList.get(i).setPrevQuote(i - 2);
+                    quoteList.get(i).setNextQuote(i + 2);
+                }
+            }
+
         } catch (ApiException e) {
             LOG.error("API exception reached, ", e);
         }

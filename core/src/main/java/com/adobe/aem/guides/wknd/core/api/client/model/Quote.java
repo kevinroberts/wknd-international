@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Quote {
     private int nextQuote;
     private int prevQuote;
+    private int likes;
     private String quoteFontSize;
     private String quote;
     private String character;
@@ -56,5 +57,13 @@ public class Quote {
 
     public void setQuoteFontSize(final String quoteFontSize) {
         this.quoteFontSize = quoteFontSize;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(final int likes) {
+        this.likes = likes;
     }
 }

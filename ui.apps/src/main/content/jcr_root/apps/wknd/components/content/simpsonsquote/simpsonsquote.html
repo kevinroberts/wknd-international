@@ -6,7 +6,7 @@
         <input class="toggle-quote" type="radio" id="AQ-${quoteList.count}" name="quote" data-sly-attribute.checked="${quoteList.count == 1}">
         <div class="author-quote">
             <div class="pull-left author-photo photo-${quoteList.count} animated bounceInLeft" style='background-image:url("${quote.image @context="attribute"}")'>
-                <div class="navigate">
+                <div class="navigate" data-sly-test="${simpsons.quotes.size > 1}">
                     <label class="label left" for="AQ-${quote.prevQuote}">&nbsp;</label>
                     <label class="label right" for="AQ-${quote.nextQuote}">&nbsp;</label>
                 </div>
@@ -14,7 +14,7 @@
             <div class="pull-right quote-content">
                 <div class="clearfix animated zoomIn">
                     <div class="quote-like pull-right">
-                        <span class="love"></span> 423
+                        <span class="love"></span> ${quote.likes}
                     </div>
                 </div>
                 <div class="quote-text animated rotateInDownRight" style='font-size: ${quote.quoteFontSize @context="attribute"}'>${quote.quote}</div>
