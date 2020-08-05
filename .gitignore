@@ -71,6 +71,8 @@ buildNumber.properties
 ### Vault ###
 .vlt
 
+.DS_Store
+
 ### IntelliJ ###
 .idea/
 *.iml

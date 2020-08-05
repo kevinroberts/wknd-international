@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:lastModified="{Date}2019-12-02T14:51:50.642-08:00"
@@ -7,7 +7,7 @@
         cq:lastReplicated="{Date}2020-04-22T19:30:14.274-05:00"
         cq:lastReplicatedBy="admin"
         cq:lastReplicationAction="Activate"
-        cq:lastRolledout="{Date}2020-04-22T11:09:58.479-05:00"
+        cq:lastRolledout="{Date}2020-08-04T15:16:28.119-05:00"
         cq:lastRolledoutBy="admin"
         cq:redirectTarget="/content/wknd/language-masters/en"
         cq:template="/conf/wknd/settings/wcm/templates/content-page-template"

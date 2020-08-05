@@ -123,7 +123,7 @@ public class ImageListImpl implements ImageList {
 
             final PageManager pageManager = resourceResolver.adaptTo(PageManager.class);
             this.wrappedListItem = listItem;
-            this.page = pageManager.getContainingPage(wrappedListItem.getPath());          
+            this.page = pageManager.getContainingPage(wrappedListItem.getPath());
 
             image = findPageComponentResources(this.page, IMAGE_RESOURCE_TYPE, 1).stream()
                     .map(r -> new SimpleImageComponentResource(r, getTitle()))
@@ -167,7 +167,6 @@ public class ImageListImpl implements ImageList {
      */
     protected java.util.List<Resource> findPageComponentResources(final Page page, final String slingResourceType, int limit) {
         final java.util.List<Resource> componentResources = new ArrayList<>();
-
         if (page == null) {
             // If page is null, there is no where to search
             return componentResources;
