@@ -1,0 +1,186 @@
+*,:after,:before{box-sizing:border-box}
+.pull-left{float:left}
+.pull-right{float:right}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+
+.author-quote-wrap .author-quote,
+.author-quote-wrap .author-photo:before {
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    position:absolute;
+}
+
+.author-quote-wrap {
+    font:300 18px/18px Roboto, sans-serif;
+    color:$black;
+    width:100%;
+    overflow:hidden;
+    max-width:560px;
+    min-height:490px;
+    margin:50px auto 0;
+    background: $brand-primary;
+    position:relative;
+    box-shadow:0 16px 28px 0 rgba(0,0,0,.22),0 25px 55px 0 rgba(0,0,0,.21);
+}
+.author-quote-wrap .author-quote {
+    display:none;
+}
+.author-quote-wrap .toggle-quote {
+    display:none;
+}
+.author-quote-wrap .toggle-quote:checked + .author-quote {
+    display:block;
+}
+.author-quote-wrap .author-quote a {
+    color:inherit;
+    text-decoration:none;
+}
+.author-quote-wrap .author-photo,
+.author-quote-wrap .quote-content {
+    height:100%;
+    position:relative;
+}
+.author-quote-wrap .author-photo{
+    width:140px;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    quotes:'\201C''\201D''\2018''\2019';
+}
+.author-quote-wrap .author-photo:before{
+    content:'';
+    background: rgba(0, 69, 255, 0.5);
+}
+.author-quote-wrap .author-photo:after{
+    top:15px;
+    left:60px;
+    font-size:72px;
+    line-height:72px;
+    position:absolute;
+    font-family:serif;
+    content:open-quote;
+}
+.author-quote-wrap .author-photo .navigate{
+    left:15px;
+    z-index:10;
+    right:15px;
+    bottom:15px;
+    position:absolute;
+    text-align:center;
+}
+.author-quote-wrap .author-photo .navigate .label{
+    width:15px;
+    height:30px;
+    cursor:pointer;
+    position:relative;
+    display:inline-block;
+}
+.author-quote-wrap .author-photo .navigate .label.left{
+    left:-30px;
+}
+.author-quote-wrap .author-photo .navigate .label.right{
+    right:-30px;
+}
+.author-quote-wrap .author-photo .navigate .label.disabled{
+    cursor:not-allowed;
+}
+.author-quote-wrap .author-photo .navigate .label:before,
+.author-quote-wrap .author-photo .navigate .label:after{
+    content:'';
+    height:2px;
+    width:15px;
+    font-weight: bold;
+    background:$black;
+    position:absolute;
+}
+.author-quote-wrap .author-photo .navigate .label:before{
+    top:62%;
+}
+.author-quote-wrap .author-photo .navigate .label:after{
+    bottom:62%;
+}
+.author-quote-wrap .author-photo .navigate .label.left:before,
+.author-quote-wrap .author-photo .navigate .label.right:after{
+    transform:rotate(45deg);
+}
+.author-quote-wrap .author-photo .navigate .label.right:before,
+.author-quote-wrap .author-photo .navigate .label.left:after{
+    transform:rotate(-45deg);
+}
+.author-quote-wrap .author-photo .navigate .label.left:before,
+.author-quote-wrap .author-photo .navigate .label.left:after{
+    left:0;
+}
+.author-quote-wrap .author-photo .navigate .label.right:before,
+.author-quote-wrap .author-photo .navigate .label.right:after{
+    right:0;
+}
+.author-quote-wrap .author-photo .navigate .label.disabled:before,
+.author-quote-wrap .author-photo .navigate .label.disabled:after,
+.author-quote-wrap .author-photo .navigate .label.disabled:hover:before,
+.author-quote-wrap .author-photo .navigate .label.disabled:hover:after{
+    background:$gray;
+}
+.author-quote-wrap .author-photo .navigate .label:hover:before,
+.author-quote-wrap .author-photo .navigate .label:hover:after{
+    background:$black;
+}
+
+.author-quote-wrap .quote-content{
+    padding:15px;
+    width:calc(560px - 140px);
+}
+.quote-content .quote-like{
+    font-size:12px;
+    font-weight:400;
+    padding:4px 8px;
+    border-radius:15px;
+    display:inline-block;
+    background:rgba(0,0,0,.2);
+}
+.quote-content .quote-like .love{
+    width:18px;
+    height:10px;
+    position:relative;
+    display:inline-block;
+}
+.quote-content .quote-like .love:before,
+.quote-content .quote-like .love:after {
+    top:0;
+    left:7px;
+    content:'';
+    width:7px;
+    height:12px;
+    background:$pink;
+    position:absolute;
+    transform:rotate(-45deg);
+    transform-origin:0 100%;
+    border-radius:20px 20px 0 0;
+}
+.quote-content .quote-like .love:after {
+    left:0;
+    transform:rotate(45deg);
+    transform-origin :100% 100%;
+}
+
+.quote-content .quote-text,
+.quote-content .quote-author{
+    text-transform:uppercase;
+}
+.quote-content .quote-text{
+    font-size:48px;
+    font-weight:900;
+    line-height:55px;
+}
+.quote-content .quote-author{
+    bottom:15px;
+    font-size:14px;
+    font-weight:500;
+    position:absolute;
+}
+.quote-content .quote-author:before{
+    content:'- ';
+}

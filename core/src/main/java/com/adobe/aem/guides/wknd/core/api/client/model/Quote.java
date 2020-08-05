@@ -6,6 +6,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  *
  */
 public class Quote {
+    private int nextQuote;
+    private int prevQuote;
+    private String quoteFontSize;
     private String quote;
     private String character;
     private String image;
@@ -29,5 +32,29 @@ public class Quote {
     @JsonProperty("characterDirection")
     public String getCharacterDirection() {
         return characterDirection;
+    }
+
+    public int getNextQuote() {
+        return nextQuote;
+    }
+
+    public int getPrevQuote() {
+        return prevQuote;
+    }
+
+    public void setNextQuote(final int nextQuote) {
+        this.nextQuote = nextQuote;
+    }
+
+    public void setPrevQuote(final int prevQuote) {
+        this.prevQuote = prevQuote;
+    }
+
+    public String getQuoteFontSize() {
+        return quoteFontSize;
+    }
+
+    public void setQuoteFontSize(final String quoteFontSize) {
+        this.quoteFontSize = quoteFontSize;
     }
 }

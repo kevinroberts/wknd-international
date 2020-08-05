@@ -1,0 +1,25 @@
+<div data-sly-use.simpsons="com.adobe.aem.guides.wknd.core.models.SimpsonsQuote"
+     data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.hasContent="${!simpsons.empty}"
+     class="author-quote-wrap">
+    <div data-sly-unwrap data-sly-list.quote="${simpsons.quotes}">
+        <input class="toggle-quote" type="radio" id="AQ-${quoteList.count}" name="quote" data-sly-attribute.checked="${quoteList.count == 1}">
+        <div class="author-quote">
+            <div class="pull-left author-photo photo-${quoteList.count} animated bounceInLeft" style='background-image:url("${quote.image @context="attribute"}")'>
+                <div class="navigate">
+                    <label class="label left" for="AQ-${quote.prevQuote}">&nbsp;</label>
+                    <label class="label right" for="AQ-${quote.nextQuote}">&nbsp;</label>
+                </div>
+            </div>
+            <div class="pull-right quote-content">
+                <div class="clearfix animated zoomIn">
+                    <div class="quote-like pull-right">
+                        <span class="love"></span> 423
+                    </div>
+                </div>
+                <div class="quote-text animated rotateInDownRight" style='font-size: ${quote.quoteFontSize @context="attribute"}'>${quote.quote}</div>
+                <div class="quote-author animated lightSpeedIn">${quote.character}</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -56,6 +56,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import static com.adobe.aem.guides.wknd.core.util.AppConstants.WKND_COMPONENT_PATH;
+
 @Model(
         adaptables = {SlingHttpServletRequest.class},
         adapters = {ImageList.class},
@@ -65,7 +67,7 @@ import java.util.stream.Collectors;
 public class ImageListImpl implements ImageList {
     private static final Logger log = LoggerFactory.getLogger(ImageListImpl.class);
 
-    protected static final String RESOURCE_TYPE = "wknd/components/content/image-list";
+    protected static final String RESOURCE_TYPE = WKND_COMPONENT_PATH + "/content/image-list";
 
     @Self
     @Required
