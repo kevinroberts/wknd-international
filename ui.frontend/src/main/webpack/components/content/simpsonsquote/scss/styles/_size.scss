@@ -1,0 +1,15 @@
+.author-quote-wrap-large {
+    .author-quote-wrap {
+        max-width: 640px;
+
+        .author-photo {
+            width: 190px;
+        }
+
+        .quote-content {
+            padding: 15px;
+            width: calc(640px - 190px);
+        }
+    }
+}
+

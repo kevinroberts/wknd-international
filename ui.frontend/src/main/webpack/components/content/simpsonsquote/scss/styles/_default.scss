@@ -18,7 +18,7 @@
     color:$black;
     width:100%;
     overflow:hidden;
-    max-width:560px;
+    max-width:600px;
     min-height:490px;
     margin:50px auto 0;
     background: $brand-primary;
@@ -44,7 +44,7 @@
     position:relative;
 }
 .author-quote-wrap .author-photo{
-    width:140px;
+    width:160px;
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
@@ -131,7 +131,7 @@
 
 .author-quote-wrap .quote-content{
     padding:15px;
-    width:calc(560px - 140px);
+    width:calc(600px - 160px);
 }
 .quote-content .quote-like{
     font-size:12px;
