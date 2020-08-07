@@ -71,10 +71,10 @@ public class SimpsonsQuoteImpl implements SimpsonsQuote {
                     quoteList.get(0).setPrevQuote(numberOfQuotes);
                     quoteList.get(0).setNextQuote(i + 2);
                 } else if (i == (quoteList.size() - 1)) {
-                    quoteList.get(i).setPrevQuote(i - 2);
+                    quoteList.get(i).setPrevQuote(i);
                     quoteList.get(i).setNextQuote(1);
                 } else {
-                    quoteList.get(i).setPrevQuote(i - 2);
+                    quoteList.get(i).setPrevQuote(i);
                     quoteList.get(i).setNextQuote(i + 2);
                 }
             }
