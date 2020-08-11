@@ -642,6 +642,12 @@
                 <version>5.7.4</version>
                 <scope>provided</scope>
             </dependency>
+            <dependency>
+                <groupId>com.adobe.acs</groupId>
+                <artifactId>acs-aem-commons-bundle</artifactId>
+                <version>4.8.4</version>
+                <scope>provided</scope>
+            </dependency>
 
             <!-- Testing -->
             <dependency>

@@ -48,6 +48,10 @@
                 <extensions>true</extensions>
                 <configuration>
                     <group>wknd</group>
+                    <!-- allowIndexDefinitions is required as acs-aem-commons deploys
+               ACLs to /oak:index which is detected as an "index definition",
+               even though it's not really an oak index definition -->
+                    <allowIndexDefinitions>true</allowIndexDefinitions>
                     <embeddeds>
                         <embedded>
                             <groupId>com.adobe.aem.guides</groupId>
@@ -80,6 +84,13 @@
                             <target>/apps/wknd-vendor-packages/content/install</target>
                         </embedded>
                     </embeddeds>
+                    <subPackages>
+                        <subPackage>
+                            <groupId>com.adobe.acs</groupId>
+                            <artifactId>acs-aem-commons-content</artifactId>
+                            <filter>true</filter>
+                        </subPackage>
+                    </subPackages>
                 </configuration>
             </plugin>
             <plugin>
@@ -196,6 +207,13 @@
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.examples</artifactId>
             <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.acs</groupId>
+            <artifactId>acs-aem-commons-content</artifactId>
+            <version>4.8.4</version>
+            <type>content-package</type>
+            <classifier>min</classifier> <!-- optional, see below -->
         </dependency>
     </dependencies>
 </project>

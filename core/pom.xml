@@ -157,6 +157,10 @@ Bundle-DocURL:
             <artifactId>javax.annotation-api</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.adobe.acs</groupId>
+            <artifactId>acs-aem-commons-bundle</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.adobe.aem</groupId>
             <artifactId>uber-jar</artifactId>
             <classifier>apis</classifier>

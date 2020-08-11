@@ -21,7 +21,7 @@ import static com.adobe.aem.guides.wknd.core.util.AppConstants.WKND_COMPONENT_PA
 
 /**
  * SimpsonsQuoteImpl
- * Component for rendering a random simpson quote
+ * Component for rendering random simpson quotes
  *
  * @Injected fields/methods are assumed to be required. To mark them as optional, use @Optional:
  * DefaultInjectionStrategy.OPTIONAL to the @Model annotation: will change the default behavior
