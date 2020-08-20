@@ -20,6 +20,7 @@ import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 import java.util.List;
 import java.util.Objects;
+import java.util.UUID;
 
 import static com.adobe.aem.guides.wknd.core.util.AppConstants.WKND_COMPONENT_PATH;
 
@@ -57,7 +58,8 @@ public class SimpsonsQuoteImpl implements SimpsonsQuote {
         try {
             identifier = StringUtils.substringAfterLast(currentNode.getIdentifier(), "/");
         } catch (RepositoryException e) {
-            LOG.warn("Could not get model identifier" , e);
+            LOG.warn("Could not get model identifier from component node" , e);
+            identifier = UUID.randomUUID().toString().replace("-", "");
         }
         try {
             if (Objects.nonNull(numberOfQuotes)) {
