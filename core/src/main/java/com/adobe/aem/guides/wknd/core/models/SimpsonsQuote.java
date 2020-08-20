@@ -11,6 +11,8 @@ public interface SimpsonsQuote {
 
     List<Quote> getQuotes();
 
+    String getIdentifier();
+
     /***
      * @return a boolean if the component has content to display.
      */

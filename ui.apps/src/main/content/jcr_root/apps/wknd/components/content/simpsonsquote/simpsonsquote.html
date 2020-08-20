@@ -1,14 +1,26 @@
 <div data-sly-use.simpsons="com.adobe.aem.guides.wknd.core.models.SimpsonsQuote"
      data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
      data-sly-test.hasContent="${!simpsons.empty}"
+     id="${simpsons.identifier @context='attribute'}-quote-wrap"
      class="author-quote-wrap">
+    <style>
+        #${simpsons.identifier @context='styleString'}-quote-wrap .author-quote {
+            display:none;
+        }
+        #${simpsons.identifier @context='styleString'}-quote-wrap .toggle-quote {
+            display:none;
+        }
+        #${simpsons.identifier @context='styleString'}-quote-wrap .toggle-quote:checked + .author-quote {
+            display:block;
+        }
+    </style>
     <div data-sly-unwrap data-sly-list.quote="${simpsons.quotes}">
-        <input class="toggle-quote" type="radio" id="AQ-${quoteList.count}" name="quote" data-sly-attribute.checked="${quoteList.count == 1}">
+        <input class="toggle-quote" type="radio" id="${simpsons.identifier}-${quoteList.count}" name="${simpsons.identifier}-quote" data-sly-attribute.checked="${quoteList.count == 1}">
         <div class="author-quote">
             <div class="pull-left author-photo photo-${quoteList.count} animated bounceInLeft" style='background-image:url("${quote.image @context="attribute"}")'>
                 <div class="navigate" data-sly-test="${simpsons.quotes.size > 1}">
-                    <label class="label left" for="AQ-${quote.prevQuote}">&nbsp;</label>
-                    <label class="label right" for="AQ-${quote.nextQuote}">&nbsp;</label>
+                    <label class="label left" for="${simpsons.identifier}-${quote.prevQuote}">&nbsp;</label>
+                    <label class="label right" for="${simpsons.identifier}-${quote.nextQuote}">&nbsp;</label>
                 </div>
             </div>
             <div class="pull-right quote-content">

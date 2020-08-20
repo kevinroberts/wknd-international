@@ -25,15 +25,7 @@
     position:relative;
     box-shadow:0 16px 28px 0 rgba(0,0,0,.22),0 25px 55px 0 rgba(0,0,0,.21);
 }
-.author-quote-wrap .author-quote {
-    display:none;
-}
-.author-quote-wrap .toggle-quote {
-    display:none;
-}
-.author-quote-wrap .toggle-quote:checked + .author-quote {
-    display:block;
-}
+
 .author-quote-wrap .author-quote a {
     color:inherit;
     text-decoration:none;

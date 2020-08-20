@@ -5,6 +5,7 @@ import com.adobe.aem.guides.wknd.core.api.client.SimpsonsQuoteService;
 import com.adobe.aem.guides.wknd.core.api.client.model.Quote;
 import com.adobe.aem.guides.wknd.core.models.SimpsonsQuote;
 import org.apache.commons.lang3.RandomUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
@@ -14,6 +15,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.annotation.PostConstruct;
+import javax.inject.Inject;
+import javax.jcr.Node;
+import javax.jcr.RepositoryException;
 import java.util.List;
 import java.util.Objects;
 
@@ -39,13 +43,22 @@ public class SimpsonsQuoteImpl implements SimpsonsQuote {
     @OSGiService
     private SimpsonsQuoteService simpsonsQuoteService;
 
+    @Inject
+    private Node currentNode;
+
     @ValueMapValue
     private Integer numberOfQuotes;
 
     private List<Quote> quoteList;
+    private String identifier;
 
     @PostConstruct
     private void init() {
+        try {
+            identifier = StringUtils.substringAfterLast(currentNode.getIdentifier(), "/");
+        } catch (RepositoryException e) {
+            LOG.warn("Could not get model identifier" , e);
+        }
         try {
             if (Objects.nonNull(numberOfQuotes)) {
                 quoteList = simpsonsQuoteService.getSimpsonsQuotes(numberOfQuotes);
@@ -88,6 +101,11 @@ public class SimpsonsQuoteImpl implements SimpsonsQuote {
     @Override
     public List<Quote> getQuotes() {
         return quoteList;
+    }
+
+    @Override
+    public String getIdentifier() {
+        return identifier;
     }
 
     @Override
