@@ -1,0 +1,25 @@
+<!--/*
+*  ***********************************************************************  *
+*  WKND Sites Project Banner Component                                      *
+*  ***********************************************************************  *
+Base properties
+	Image
+	Overlay text
+	CTA Link
+*/-->
+
+<div data-sly-use.bannerModel="com.adobe.aem.guides.wknd.core.models.Banner"
+     data-sly-test.hasContent="${!bannerModel.empty}"
+     id="${bannerModel.identifier @context='attribute'}-cmp-banner"
+     style='background: url("${bannerModel.image.src @context="attribute"}") top left/cover no-repeat'
+        class="cmp-banner">
+    <div class="cmp-banner__text">
+        <h2 class="cmp-banner__title">${bannerModel.textOverlay || bannerModel.textOverlayShared}</h2>
+        <h3 class="cmp-banner__subtitle">
+            <a class="cmp-banner__button" href="${bannerModel.linkUrl || bannerModel.linkUrlShared}">${bannerModel.linkText || bannerModel.linkTextShared}</a>
+        </h3>
+    </div>
+</div>
+
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${templates.placeholder @ isEmpty = !hasContent}" />

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ |  ***********************************************************************
+ |  WKND Sites Project CONFIDENTIAL
+ |  ___________________
+ |
+ leverages asset picker from commerce package
+ /libs/commerce/gui/components/common/assetpicker/clientlibs/assetpicker.js
+ |  ***********************************************************************
+-->
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          jcr:primaryType="nt:unstructured"
+          extraClientlibs="[cq.common.wcm,core.wcm.page.properties,cq.wcm.msm.properties,cq.authoring.editor.plugin.commerce]"
+          jcr:title="WKND Banner"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+   <content jcr:primaryType="nt:unstructured"
+            margin="{Boolean}true"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+      <items jcr:primaryType="nt:unstructured">
+         <tabs jcr:primaryType="nt:unstructured"
+               sling:resourceType="granite/ui/components/coral/foundation/tabs">
+            <items jcr:primaryType="nt:unstructured">
+               <tab-1 jcr:primaryType="nt:unstructured"
+                jcr:title="Banner Image" sling:resourceType="granite/ui/components/coral/foundation/container">
+                  <layout
+                          jcr:primaryType="nt:unstructured"
+                          margin="{Boolean}true"
+                          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns" />
+                  <items jcr:primaryType="nt:unstructured">
+                     <column jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                           <section
+                                   jcr:primaryType="nt:unstructured"
+                                   sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                              <items jcr:primaryType="nt:unstructured">
+                                 <thumbnail
+                                         jcr:primaryType="nt:unstructured"
+                                         sling:resourceType="cq/gui/components/coral/common/wcm/pagethumbnail"
+                                         page="${empty param.item ? requestPathInfo.suffix : param.item}"/>
+                                 <edit
+                                         jcr:primaryType="nt:unstructured"
+                                         sling:resourceType="wknd/components/author/assetpicker"
+                                         name="./image/fileReference"
+                                         previewTarget=".foundation-layout-thumbnail-image coral-card-asset img"
+                                         text="Change"
+                                         type="image"/>
+                                 <defaultResourceTypeForImage
+                                         jcr:primaryType="nt:unstructured"
+                                         sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                         name="./image/sling:resourceType"
+                                         value="wknd/components/content/image"/>
+                                 <charset
+                                         jcr:primaryType="nt:unstructured"
+                                         sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                         ignoreData="{Boolean}true"
+                                         name="_charset_"
+                                         value="utf-8"/>
+                              </items>
+                           </section>
+                        </items>
+                     </column>
+                  </items>
+               </tab-1>
+               <tab-2 jcr:primaryType="nt:unstructured"
+                      jcr:title="Banner Text"
+                      sling:resourceType="granite/ui/components/coral/foundation/container">
+                  <layout jcr:primaryType="nt:unstructured"
+                          margin="{Boolean}true"
+                          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                  <items jcr:primaryType="nt:unstructured">
+                     <column jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                           <textOverlay cq-msm-lockable="./textOverlay"
+                                        fieldDescription="Adds text that is overlaid on top of the banner"
+                                        fieldLabel="Overlay text"
+                                        required="{Boolean}false"
+                                        jcr:primaryType="nt:unstructured"
+                                        name="./textOverlay"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <linkURL
+                                   cq-msm-lockable="./linkURL"
+                                   jcr:primaryType="nt:unstructured"
+                                   sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                   fieldDescription="Link url or page path"
+                                   fieldLabel="CTA Link url"
+                                   name="./linkURL"
+                                   rootPath="/content/wknd"/>
+                           <linkText cq-msm-lockable="./linkText"
+                                        fieldDescription="Adds text that appears on the link"
+                                        fieldLabel="CTA Link Text"
+                                        required="{Boolean}false"
+                                        jcr:primaryType="nt:unstructured"
+                                        name="./linkText"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                        </items>
+                     </column>
+                  </items>
+               </tab-2>
+            </items>
+         </tabs>
+      </items>
+   </content>
+</jcr:root>

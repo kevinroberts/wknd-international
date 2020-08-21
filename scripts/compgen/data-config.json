@@ -1,0 +1,73 @@
+{
+    "project-settings": {
+        "code-owner": "WKND Sites Project",
+        "bundle-path": "core/src/main/java",
+        "test-path": "core/src/test/java",
+        "apps-path": "ui.apps/src/main/content/jcr_root/apps",
+        "component-path": "wknd/components",
+        "model-interface-pkg": "com.adobe.aem.guides.wknd.core.models",
+        "model-impl-pkg": "com.adobe.aem.guides.wknd.core.models.impl"
+    },
+    "name": "banner",
+    "title": "WKND Banner",
+    "group": "WKND.Content",
+    "type": "content",
+    "options": {
+        "js": true,
+        "jstxt": true,
+        "css": true,
+        "csstxt": true,
+        "html": true,
+        "html-content": false,
+        "slingmodel": true,
+        "testclass": false,
+        "junit-major-version": 5,
+        "content-exporter": false,
+        "model-adaptables": [
+            "request"
+        ],
+        "generic-javadoc": false,
+        "properties-tabs": [
+            {
+                "id": "tab-1",
+                "label": "Properties",
+                "fields": [
+                    "textOverlay"
+                ]
+            }
+        ],
+        "properties-shared-tabs" : [
+            {
+                "id": "tab-shared",
+                "label": "Tab Shared",
+                "fields": ["textOverlayShared"]
+            }
+        ],
+        "properties-global-tabs" : [
+        ],
+        "properties": [
+            {
+                "field": "textOverlay",
+                "description": "Adds text that is overlaid on top of the banner",
+                "javadoc": "Returns a text value that is overlaid on top of the banner",
+                "type": "textfield",
+                "label": "Overlay text",
+                "json-expose": true,
+                "attributes": {}
+            }
+        ],
+        "properties-shared": [
+            {
+                "field": "textOverlayShared",
+                "description": "Adds text that is overlaid on top of the banner",
+                "javadoc": "Returns a text value that is overlaid on top of the banner",
+                "type": "textfield",
+                "label": "Shared Overlay text",
+                "json-expose": true,
+                "attributes": {}
+            }
+        ],
+        "properties-global": [
+        ]
+    }
+}

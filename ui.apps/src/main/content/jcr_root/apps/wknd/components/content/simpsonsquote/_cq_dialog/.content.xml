@@ -12,7 +12,7 @@
                     sling:resourceType="granite/ui/components/coral/foundation/tabs"
                     maximized="{Boolean}false">
                 <items jcr:primaryType="nt:unstructured">
-                    <!-- This allows the Core Components' Image component's asset definition tab -->
+                    <!-- This hides the Core Components' Image component's asset definition tab -->
                     <asset
                             jcr:primaryType="nt:unstructured"
                             sling:hideResource="{Boolean}true"/>

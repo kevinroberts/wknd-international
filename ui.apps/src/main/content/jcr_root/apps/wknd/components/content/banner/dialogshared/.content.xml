@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ |  ***********************************************************************
+ |  WKND Sites Project CONFIDENTIAL
+ |  ___________________
+ |
+ |  Copyright 2020 WKND Sites Project
+ |  All Rights Reserved.
+ |
+ |  NOTICE:  All information contained herein is, and remains the property
+ |  of WKND Sites Project and its suppliers, if any. The intellectual and
+ |  technical concepts contained herein are proprietary to WKND Sites Project
+ |  and its suppliers and are protected by trade secret or copyright law.
+ |  Dissemination of this information or reproduction of this material
+ |  is strictly forbidden unless prior written permission is obtained
+ |  from WKND Sites Project.
+ |  ***********************************************************************
+-->
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="WKND Banner (Shared Properties)"
+          extraClientlibs="[cq.common.wcm,core.wcm.page.properties,cq.wcm.msm.properties,cq.authoring.editor.plugin.commerce]"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+   <content jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+      <items jcr:primaryType="nt:unstructured">
+         <tabs jcr:primaryType="nt:unstructured"
+               sling:resourceType="granite/ui/components/coral/foundation/tabs">
+            <items jcr:primaryType="nt:unstructured">
+               <tab-shared jcr:primaryType="nt:unstructured"
+                           jcr:title="Tab Shared"
+                           sling:resourceType="granite/ui/components/coral/foundation/container">
+                  <layout jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                  <items jcr:primaryType="nt:unstructured">
+                     <column jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                           <textOverlayShared cq-msm-lockable="./textOverlayShared"
+                                              fieldDescription="Adds text that is overlaid on top of the banner"
+                                              fieldLabel="Shared Overlay text"
+                                              jcr:primaryType="nt:unstructured"
+                                              name="./textOverlayShared"
+                                              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <linkURLShared
+                                   cq-msm-lockable="./linkURLShared"
+                                   jcr:primaryType="nt:unstructured"
+                                   sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                   fieldDescription="Shared Link url or page path"
+                                   fieldLabel="Shared CTA Link url"
+                                   name="./linkURLShared"
+                                   rootPath="/content/wknd"/>
+                           <linkTextShared cq-msm-lockable="./linkTextShared"
+                                     fieldDescription="Adds text that appears on the link"
+                                     fieldLabel="Shared CTA Link Text"
+                                     required="{Boolean}false"
+                                     jcr:primaryType="nt:unstructured"
+                                     name="./linkTextShared"
+                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                        </items>
+                     </column>
+                  </items>
+               </tab-shared>
+            </items>
+         </tabs>
+      </items>
+   </content>
+</jcr:root>
