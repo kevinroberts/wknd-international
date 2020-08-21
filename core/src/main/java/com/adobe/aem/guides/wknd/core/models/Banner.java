@@ -28,8 +28,7 @@ import org.osgi.annotation.versioning.ConsumerType;
  */
 @ConsumerType
 public interface Banner {
-
-
+    
     /**
      * Returns a text value that is overlaid on top of the banner
      *
@@ -63,6 +62,10 @@ public interface Banner {
      */
     Image getImage();
 
+    /**
+     * Gets link url for banner
+     * @return
+     */
     String getLinkUrl();
 
     String getLinkText();

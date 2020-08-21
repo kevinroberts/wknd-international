@@ -115,6 +115,11 @@ public class BannerImpl implements Banner
 
     @Override
     public String getLinkUrl() {
+        if (StringUtils.isNotEmpty(linkUrl)
+        && !StringUtils.startsWithIgnoreCase(linkUrl, "http")
+                && !linkUrl.endsWith(".html")) {
+            linkUrl = linkUrl + ".html";
+        }
         return linkUrl;
     }
 
@@ -135,6 +140,11 @@ public class BannerImpl implements Banner
 
     @Override
     public String getLinkUrlShared() {
+        if (StringUtils.isNotEmpty(linkUrlShared)
+                && !StringUtils.startsWithIgnoreCase(linkUrlShared, "http")
+                && !linkUrlShared.endsWith(".html")) {
+            linkUrlShared = linkUrlShared + ".html";
+        }
         return linkUrlShared;
     }
 
