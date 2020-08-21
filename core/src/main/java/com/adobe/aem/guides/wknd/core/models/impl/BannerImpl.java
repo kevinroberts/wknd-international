@@ -87,10 +87,8 @@ public class BannerImpl implements Banner
             identifier = UUID.randomUUID().toString().replace("-", "");
         }
         Resource child = request.getResource().getChild("image");
-        if (Objects.nonNull(child)) {
-            if (child.getValueMap().containsKey("fileReference")) {
-                image = modelFactory.getModelFromWrappedRequest(request, child, Image.class);
-            }
+        if (Objects.nonNull(child) && child.getValueMap().containsKey("fileReference")) {
+            image = modelFactory.getModelFromWrappedRequest(request, child, Image.class);
         }
 
         if (Objects.isNull(textOverlay)
