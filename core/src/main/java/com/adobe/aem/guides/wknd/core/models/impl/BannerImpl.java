@@ -19,8 +19,11 @@
 package com.adobe.aem.guides.wknd.core.models.impl;
 
 import com.adobe.acs.commons.models.injectors.annotation.SharedValueMapValue;
+import com.adobe.acs.commons.wcm.PageRootProvider;
+import com.adobe.acs.commons.wcm.properties.shared.SharedComponentProperties;
 import com.adobe.aem.guides.wknd.core.models.Banner;
 import com.adobe.cq.wcm.core.components.models.Image;
+import com.day.cq.wcm.api.Page;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
@@ -42,13 +45,20 @@ import java.util.UUID;
 
 @Model(adaptables = {
     SlingHttpServletRequest.class
-}, adapters = Banner.class, resourceType = "wknd/components/content/banner")
+}, adapters = Banner.class, resourceType = BannerImpl.BANNER_RESOURCE_TYPE)
 public class BannerImpl implements Banner
 {
+    protected static final String BANNER_RESOURCE_TYPE = "wknd/components/content/banner";
     private static final Logger LOG = LoggerFactory.getLogger(BannerImpl.class);
 
     @Self
     private SlingHttpServletRequest request;
+
+    @OSGiService
+    private PageRootProvider pageRootProvider;
+
+    @OSGiService
+    private ModelFactory modelFactory;
 
     @SharedValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String textOverlayShared;
@@ -68,14 +78,15 @@ public class BannerImpl implements Banner
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL, name = "linkURL")
     private String linkUrl;
 
-    @OSGiService
-    private ModelFactory modelFactory;
-
     @Inject
     private Node currentNode;
 
     private Image image;
+
+    private Image sharedImage;
+
     private boolean empty = false;
+
     private String identifier;
 
     @PostConstruct
@@ -89,6 +100,17 @@ public class BannerImpl implements Banner
         Resource child = request.getResource().getChild("image");
         if (Objects.nonNull(child) && child.getValueMap().containsKey("fileReference")) {
             image = modelFactory.getModelFromWrappedRequest(request, child, Image.class);
+        }
+
+        if (Objects.nonNull(pageRootProvider)) {
+            Page pageRoot = pageRootProvider.getRootPage(request.getResource());
+            String sharedPropsPath = pageRoot.getPath() + "/jcr:content/" + SharedComponentProperties.NN_SHARED_COMPONENT_PROPERTIES +  "/"
+                    + BANNER_RESOURCE_TYPE;
+            Resource sharedPropsResource = request.getResourceResolver().getResource(sharedPropsPath);
+            Resource sharedImageResource = Objects.nonNull(sharedPropsResource) ? sharedPropsResource.getChild("sharedImage") : null;
+            if (Objects.nonNull(sharedImageResource) && sharedImageResource.getValueMap().containsKey("fileReference")) {
+                sharedImage = modelFactory.getModelFromWrappedRequest(request, sharedImageResource, Image.class);
+            }
         }
 
         if (Objects.isNull(textOverlay)
@@ -146,6 +168,11 @@ public class BannerImpl implements Banner
             linkUrlShared = linkUrlShared + ".html";
         }
         return linkUrlShared;
+    }
+
+    @Override
+    public Image getImageShared() {
+        return sharedImage;
     }
 
     @Override

@@ -11,7 +11,7 @@ Base properties
 <div data-sly-use.bannerModel="com.adobe.aem.guides.wknd.core.models.Banner"
      data-sly-test.hasContent="${!bannerModel.empty}"
      id="${bannerModel.identifier @context='attribute'}-cmp-banner"
-     style='background: url("${bannerModel.image.src @context="attribute"}") top left/cover no-repeat'
+     style='background: url("${bannerModel.image.src || bannerModel.imageShared.src @context="attribute"}") top left/cover no-repeat'
         class="cmp-banner">
     <div class="cmp-banner__text">
         <h2 class="cmp-banner__title">${bannerModel.textOverlay || bannerModel.textOverlayShared}</h2>
