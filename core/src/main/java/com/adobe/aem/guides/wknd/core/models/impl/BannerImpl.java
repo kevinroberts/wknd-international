@@ -1,21 +1,8 @@
 /*
  * ***********************************************************************
- * WKND Sites Project CONFIDENTIAL
- * ___________________
- *
- * Copyright 2020 WKND Sites Project.
- * All Rights Reserved.
- *
- * NOTICE:  All information contained herein is, and remains the property
- * of WKND Sites Project and its suppliers, if any. The intellectual and
- * technical concepts contained herein are proprietary to WKND Sites Project
- * and its suppliers and are protected by trade secret or copyright law.
- * Dissemination of this information or reproduction of this material
- * is strictly forbidden unless prior written permission is obtained
- * from WKND Sites Project.
+ * WKND Sites Project
  * ***********************************************************************
  */
-
 package com.adobe.aem.guides.wknd.core.models.impl;
 
 import com.adobe.acs.commons.models.injectors.annotation.SharedValueMapValue;
@@ -115,6 +102,7 @@ public class BannerImpl implements Banner
 
         if (Objects.isNull(textOverlay)
                 && Objects.isNull(linkUrl)
+                && Objects.isNull(image)
                 && Objects.isNull(textOverlayShared)) {
             empty = true;
         }

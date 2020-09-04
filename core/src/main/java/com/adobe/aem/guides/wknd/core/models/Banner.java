@@ -30,15 +30,22 @@ import org.osgi.annotation.versioning.ConsumerType;
 public interface Banner {
 
     /**
-     * Returns a text value that is overlaid on top of the banner
+     * Returns a shared text value that is overlaid on top of the banner
      *
      * @return String
-     *
      */
     String getTextOverlayShared();
 
+    /**
+     * Returns the shared text value for the banner link
+     * @return String
+     */
     String getLinkTextShared();
 
+    /**
+     * Returns the shared link value for the banner link
+     * @return String
+     */
     String getLinkUrlShared();
 
     /**
@@ -62,6 +69,10 @@ public interface Banner {
      */
     Image getImage();
 
+    /**
+     * Get the shared banner image
+     * @return Image
+     */
     Image getImageShared();
 
     /**
@@ -70,6 +81,10 @@ public interface Banner {
      */
     String getLinkUrl();
 
+    /**
+     * Gets the banner link text
+     * @return String
+     */
     String getLinkText();
 
     /***
